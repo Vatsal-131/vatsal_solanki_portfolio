@@ -1,13 +1,4 @@
-/* GENERAL */
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
+GENERAL
 body{
     font-family: "Poppins" , sans-serif ;
 }
@@ -103,7 +94,7 @@ a:hover{
     width: fit-content;
     max-height: 0;
     overflow: hidden;
-    transition: all;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-links a{
@@ -152,7 +143,6 @@ a:hover{
 /* SECTIONS */
 
 section{
-    padding-top: 4vh;
     height: 96vh;
     margin: 0 10rem;
     box-sizing: border-box;
@@ -174,8 +164,8 @@ section{
 
 .section__pic-container{
     display: flex;
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
     margin: auto 0;
 }
 
@@ -232,7 +222,7 @@ section{
 
 .btn-color-1,
 .btn-color-2{
-    border: rdb(53,53,53) 0.1rem solid;
+    border: rgb(53,53,53) 0.1rem solid;
 }
 
 .btn-color-1:hover,
@@ -245,7 +235,7 @@ section{
     color: white;
 }
 .btn-color-1:hover{
-    background: rgb(0,0,0,);
+    background: rgb(0,0,0);
 }
 
 .btn-color-2{
@@ -428,3 +418,60 @@ footer{
 footer p {
     text-align: center;
 }
+
+
+/* HEADER */
+
+header {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+
+header h4{
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.5rem;}
+
+/* SPLASH SCREEN */
+
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+.name-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.name{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.name.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.name.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
